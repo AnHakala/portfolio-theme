@@ -3,3 +3,77 @@
     Author: Andreas Hakala
     Description: A theme to present creative work
 */
+
+* {
+	
+}
+
+/* ------------------- Fonts ------------------- */
+
+
+
+/* ------------------- Unique Fonts ------------------- */
+
+#site-name {
+	margin: 10px 0;
+	width: 30%;	
+}
+
+/* ------------------- Header, Main & Footer ------------------- */
+
+#site-header {
+	background-color: #C0C0C0;
+	display: flex;
+	padding: 20px;
+}
+
+#site-main {
+	padding: 2%;
+}
+
+#site-footer {
+	background-color: #C0C0C0;
+	display: flex;
+	padding: 20px;
+}
+
+/* ------------------- Project Page Containers ------------------- */
+
+.text-container {
+	text-align: center;
+	overflow: hidden;
+}
+
+.project-container { 
+	display: flex;
+	flex-wrap: wrap;
+	margin: 40px 0;
+}
+
+.single-container {
+	width: 33.33%;
+	margin-bottom: 20px;
+	text-align: center;
+}
+
+.image-container {
+	display: block;
+	margin: 0 auto;
+}
+
+/* ------------------- Navigation ------------------- */
+
+.menu {
+	width: 70%;
+}
+
+ul {
+	float: right;
+	list-style: none;
+}
+
+ul li {
+	float: left;
+	margin-right: 20px;
+}
+
