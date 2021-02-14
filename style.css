@@ -1,79 +1,819 @@
 /*
-    Theme Name: WP Lab Portfolio Theme
+    Theme Name: Main Portfolio Theme
     Author: Andreas Hakala
-    Description: A theme to present creative work
+    Description: My Personal Portfolio.
 */
 
 * {
+	margin: 0px;
+	padding: 0px;
+}
+
+/* ------------------------------------------------------------------------------------------- */
+/* ------------------------------------------ Fonts ------------------------------------------ */
+/* ------------------------------------------------------------------------------------------- */
+
+p {
+	font-family: mr-eaves-modern, sans-serif;
+	font-weight: 300;
+	font-size: 20px;
+	font-style: normal;
+	line-height: 40px;
+}
+
+a {
+	font-family: proxima-nova, sans-serif;
+	font-weight: 700;
+	font-size: 16px;
+	color: #FFF;
+	text-decoration: none;
+}
+
+h1 {
+	font-family: proxima-nova, sans-serif;
+	font-weight: 700;
+	font-size: 36px;
+	font-style: normal;
+	letter-spacing: 3px;
+	line-height: 42px;
+	padding: 20px 0;
+	text-transform: uppercase;
+}
+
+h2 {
+	font-family: proxima-nova, sans-serif;
+	font-weight: 700;
+	font-size: 18px;
+	font-style: normal;
+	letter-spacing: 2px;
+	line-height: 32px;
+	text-transform: uppercase;
 	
 }
 
-/* ------------------- Fonts ------------------- */
-
+h3 {
+	font-family: proxima-nova, sans-serif;
+	font-weight: 700;
+	font-size: 14px;
+	font-style: normal;
+	letter-spacing: 2px;
+	line-height: 30px;
+	text-transform: uppercase;
+}
 
 
 /* ------------------- Unique Fonts ------------------- */
 
-#site-name {
-	margin: 10px 0;
-	width: 30%;	
+#header-title {
+	color: #FFF;
+	font-size: 26px;
+	font-style: normal;
+	letter-spacing: 5px;
+	line-height: 40px;
+	letter-spacing: 5px;
+	text-transform: uppercase;
+	margin: auto;
+	width: 50%;
 }
 
-/* ------------------- Header, Main & Footer ------------------- */
+#heading-title {
+	font-size: 60px;
+	color: #FFF;
+	letter-spacing: 15px;
+}
+
+#heading-text {
+	font-family: proxima-nova, sans-serif;
+	font-size: 20px;
+	color: #FFF;
+	margin: 0 auto;
+	letter-spacing: 5px;
+	text-transform: uppercase;
+}
+
+.project-links {
+	display: inline-block;
+	color: #161830;
+	transition-duration: 0.4s;
+	padding: 20px;
+}
+
+.project-description {
+	margin: 20px 0;
+}
+
+.header-links {
+	transition-duration: 0.4s;
+}
+
+#footer-text {
+	font-family: proxima-nova, sans-serif;
+	font-size: 16px;
+	color: #FFF;
+	margin: 0 auto;
+	letter-spacing: 5px;
+	text-transform: uppercase;
+}
+
+.taxonomy-title {
+	margin-bottom: 20px;
+}
+
+.taxonomy-text {
+	background-color: #161830;
+	color: #FFF;
+	font-size: 12px;
+	letter-spacing: 3px;
+	text-transform: uppercase;
+	margin-top: 10px;
+}
+
+/* ------------------------------------------------------------------------------------------- */
+/* ------------------------------------------ HEADER ----------------------------------------- */
+/* ------------------------------------------------------------------------------------------- */
 
 #site-header {
-	background-color: #C0C0C0;
+	background-color: #161830;
 	display: flex;
-	padding: 20px;
+	padding: 20px 10px;
+	position: fixed;
+	top: 32px;
+	width: 100%;
+	z-index: 1;
 }
+
+/* ------------------- Header Logo ------------------- */
+
+#header-theme-logo {
+	max-width: 70px;
+	padding: 0 40px;
+}
+
+#header-simple-logo {
+	max-width: 160px;
+}
+
+#logo-container {
+	padding-top: 3px;
+}
+
+#logo-container-project {
+	margin: 0 auto;
+	padding-top: 3px;
+}
+
+#project-header {
+	background-color: #161830;
+	display: flex;
+	padding: 20px 10px;
+}
+
+/* ------------------- Header Navigation ------------------- */
+
+#nav-homepage {
+	float: right;
+	margin: auto 0;
+	width: 100%;
+}
+
+#menu-main {
+	float: left;
+	width: 50%;
+	padding: 20px 0 0 0;
+}
+
+#menu-list {
+	float: right;
+	list-style: none;
+}
+
+.menu-row {
+	float: left;
+	margin-right: 40px;
+	padding: 15px 0;
+}
+
+.menu-row a {
+	font-weight: 300;
+	letter-spacing: 3px;
+	transition-duration: 0.3s;
+}
+
+.menu-row a:hover {
+	text-shadow:
+    -0.3px -0.3px 0 #FFF,
+    0.3px -0.3px 0 #FFF,
+    -0.3px 0.3px 0 #FFF,
+    0.3px 0.3px 0 #FFF;
+    -webkit-transition: all .3s;
+    -moz-transition: all .3s;
+    -o-transition: all .3s;
+    transition: all .3s;
+}
+
+/* ------------------- Scroll Navigation ------------------- */
+
+#menuMainScroll {
+	display: none;
+}
+
+.menu-scroll {
+	position: fixed;
+    top: 0;
+    color: white;
+    width: 100%;
+    z-index: 1;
+    transition: all .3s;
+}
+
+.hide {
+    opacity: 0;   
+}
+
+.show {
+    opacity: 1; 
+}
+
+
+/* ------------------------------------------------------------------------------------------- */
+/* ------------------------------------------- BODY ------------------------------------------ */
+/* ------------------------------------------------------------------------------------------- */
 
 #site-main {
-	padding: 2%;
+	
 }
+
+/* ------------------- Heading ------------------- */
+
+.heading-container {
+    height: 100%;
+    background: url('images/heading2.png') 50% 50% no-repeat;
+    background-size: cover;
+	margin-top: 95px;
+}
+
+.heading-information {	
+	text-align: center;
+    color: white;
+    padding: 160px 40px;
+    margin: 0 auto;
+}
+
+.heading-information.small {
+    max-width: 640px;
+}
+
+#heading-button {
+	background: none;
+	border: 3px solid #FFFFFF;
+	color: #FFFFFF;
+	font-family: proxima-nova, sans-serif;
+	font-weight: 300;
+	font-size: 16px;
+	font-style: uppercase;
+	letter-spacing: 3px;
+	text-transform: uppercase;
+	padding: 15px 45px;
+	margin: 20px;
+	transition-duration: 0.4s
+
+}
+
+#heading-button:hover {
+	background: #161830;
+
+}
+
+/* ------------------------------------------------------------------------------------------- */
+/* ------------------------------------------ FOOTER ----------------------------------------- */
+/* ------------------------------------------------------------------------------------------- */
 
 #site-footer {
-	background-color: #C0C0C0;
-	display: flex;
-	padding: 20px;
+	background-color: #161830;
+	display: flex;	
+	flex-direction: column;
+	padding: 40px;
 }
 
-/* ------------------- Project Page Containers ------------------- */
+/* ------------------- Social Media Links ------------------- */
 
-.text-container {
+#social-media-links-container {
+	display: flex;
+	list-style: none;
+	margin: 0 auto 20px auto;
+	text-align: center;
+
+}
+
+.social-media-individual-container {
+	margin: 0 20px;
+}
+
+.social-media-logo {
+	width: 40px;
+}
+
+
+/* ------------------------------------------------------------------------------------------- */
+/* ------------------------------- FEED-PAGE (Not implemented) ------------------------------- */
+/* ------------------------------------------------------------------------------------------- */
+
+.article-container {
+	text-align: center;
+	margin: 20px 0;
+	padding: 0 200px;
+}
+
+#feed-container {
+	padding: 40px 0;
+}
+
+#feed-title {
 	text-align: center;
 	overflow: hidden;
 }
 
-.project-container { 
+.feed-individual {
+	padding: 10px 0;
+}
+
+
+/* ------------------------------------------------------------------------------------------- */
+/* --------------------------------------- FRONT-PAGE ---------------------------------------- */
+/* ------------------------------------------------------------------------------------------- */
+
+/* ------------------- Frontpage - About Containers ------------------- */
+
+#about-me-container {
+	padding: 40px 0;
+	text-align: center;
+}
+
+#about-me-picture-container {
+	text-align: center;
+}
+
+#about-me-picture {
+	margin: 20px 0;
+}
+
+#about-me-text-container {
+	margin: 20px auto;
+	max-width: 640px;
+	text-align: center;
+}
+
+/* ------------------- Frontpage - Recent Projects Containers ------------------- */
+
+#recent-projects-container {
+	background: #EFEFEF;
+	padding: 40px 0;
+	text-align: center;
+}
+
+.frontpage-project-container { 
 	display: flex;
 	flex-wrap: wrap;
-	margin: 40px 0;
+	margin: 20px auto;
+	max-width: 1000px;
+}
+
+/* ------------------- Frontpage - Contact Form Containers ------------------- */
+
+#contact-me-container {
+	padding: 40px 0;
+	text-align: center;
+}
+
+#contact-form-container {
+	margin: 40px auto;
+	max-width: 640px;
+	text-align: left;
+}
+
+#contact-list {
+	float: none;
+	display: flex;
+	flex-direction: column;
+	text-align: left;
+}
+
+#contact-information {
+	display: flex;
+	flex-direction: horizontal;
+}
+
+.contact-half-width {
+	width: 48%;
+	display: flex;
+	flex-direction: column;
+}
+
+.contact-half-width:first-child {
+	padding-right: 4%
+}
+
+.contact-full-width {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+}
+
+.contact-label {
+	font-family: mr-eaves-modern, sans-serif;
+	font-weight: 300;
+	font-size: 18px;
+	font-style: normal;
+	margin: 5px 0;
+}
+
+.contact-box {
+	background-color: #e9e9e9;
+	border: none;
+	font-family: mr-eaves-modern, sans-serif;
+	font-weight: 300;
+	font-size: 20px;
+	font-style: normal;
+	margin: 5px 0;
+	padding: 10px;
+}
+
+.contact-text-box {
+	background-color: #e9e9e9;
+	border: none;
+	font-family: mr-eaves-modern, sans-serif;
+	font-weight: 500;
+	font-size: 20px;
+	margin: 5px 0;
+	max-height: 150px;
+	padding: 10px;
+}
+
+#submit-button {
+	background-color: #161830;
+	border: none;
+	color: #FFF;
+	font-family: proxima-nova, sans-serif;
+	font-weight: 300;
+	font-size: 16px;
+	font-style: uppercase;
+	letter-spacing: 3px;
+	text-transform: uppercase;
+	margin: 15px 0;
+	padding: 15px;
+	transition-duration: 0.4s;
+}
+
+#submit-button:hover {
+	background-color: #454659;
+}
+
+/* ------------------- Frontpage - Shared Containers ------------------- */
+
+.frontpage-title-container {
+	text-align: center;
+}
+
+.text-divider {
+	margin: 30px 0;
+}
+
+.text-divider-container {
+	text-align: center;
+}
+
+.text-divider-section {
+	text-align: center;
+	padding: 40px 0;
+}
+
+/* ------------------------------------------------------------------------------------------- */
+/* ------------------------------------ MY-PROJECTS-PAGE ------------------------------------- */
+/* ------------------------------------------------------------------------------------------- */
+
+#my-projects-container {
+	padding: 30px 0;
+	text-align: center;
+}
+
+.archive-project-container { 
+	display: flex;
+	flex-wrap: wrap;
+	margin: 10px auto;
+	max-width: 1000px;
+}
+
+.archive-project-text-container {
+	text-align: center;
+	overflow: hidden;
 }
 
 .single-container {
 	width: 33.33%;
-	margin-bottom: 20px;
 	text-align: center;
 }
 
 .image-container {
 	display: block;
 	margin: 0 auto;
+	max-width: 100%;
 }
 
-/* ------------------- Navigation ------------------- */
+/* ------------------- Project Wrap & Hover Effect Containers ------------------- */
 
-.menu {
-	width: 70%;
+.image-wrap {
+	position: relative;
+	display: inline-block;
 }
 
-ul {
-	float: right;
-	list-style: none;
+.text-wrap {
+	position: absolute;
+	/* background: rgba(22,24,48,0.3); */
+	top: 0;
+	width: 95%;
+	margin: 0 auto;
+    padding: 44.6% 2.5%;
+	transition-duration: 0.3s;
+	opacity: 0%
 }
 
-ul li {
-	float: left;
-	margin-right: 20px;
+.text-wrap:hover {
+	opacity: 100%
+}
+	
+.text-wrap h2 {
+	color: #FFF;
+	text-shadow: 0px 0px 5px #000000;
 }
 
+.text-wrap:hover {
+	background: rgba(22,24,48,0.7);
+}
+
+/* ------------------------------------------------------------------------------------------- */
+/* --------------------------------- INDIVIDUAL-PROJECT-PAGE --------------------------------- */
+/* ------------------------------------------------------------------------------------------- */
+
+.single-project-container { 
+	background: #e9e9e9;
+	margin: 0px auto;
+    max-width: 740px;
+	padding: 40px 30%;
+	display: flex;
+}
+
+#single-project-info-container {
+	width: 100%;
+}
+
+.single-project-text-container {
+	text-align: center;
+	overflow: hidden;
+}
+
+.single-project-image-container {
+	/*  -webkit-box-shadow: -10px 10px 0px 0px rgba(233,233,233,0.84); 
+	box-shadow: -10px 10px 0px 0px rgba(233,233,233,0.84); */
+	border: 10px solid #FFF;
+	display: block;
+	margin-right: 30px;
+	max-width: 48%;
+}
+
+.button-container {
+	margin: 40px 0;
+	text-align: center;	
+}
+
+.button-redirect {
+	background-color: #161830;
+	border: none;
+	color: #FFF;
+	font-size: 14px;
+	font-weight: 500;
+	letter-spacing: 3px;	
+	margin: 0 10px;
+	min-width: 200px;
+	padding: 15px 30px;
+	text-transform: uppercase;
+	transition-duration: 0.4s;
+}
+
+.button-redirect:hover {
+	background-color: #454659;
+}
+
+.taxonomies-container {
+	display: flex;
+	flex-wrap: wrap;
+	margin: 40px 0 20px 0; 
+	width: 100%;
+}
+
+.individual-taxonomy-container {
+	background: #FFFFFF;
+	width: 45%;
+    padding: 1.5%;
+    text-align: center;
+}
+
+.individual-taxonomy-container:first-child {
+	margin-right: 2%;
+}
+
+.individual-taxonomy-container:last-child {
+	margin-left: 2%;
+}
+
+/* ------------------------------------------------------------------------------------------- */
+/* ------------------------------------ PLUGINS-CSS-EDITS ------------------------------------ */
+/* ------------------------------------------------------------------------------------------- */
+
+/* ------------------- Visual Portfolio Gallery ------------------- */
+
+.vp-portfolio {
+	background-color: #FFF;
+	margin: 40px auto;
+	padding: 10px;
+}
+
+/* ------------------- Contact Form 7 Styling ------------------- */
+
+.wpcf7 input[type="text"], .wpcf7 input[type="email"], .wpcf7 textarea
+{
+    background-color: #e9e9e9;
+	border: none;
+	font-family: mr-eaves-modern, sans-serif;
+	font-weight: 300;
+	font-size: 20px;
+	font-style: normal;
+	margin: 5px 0;
+	padding: 2%;
+    width: 96%;
+}
+
+.wpcf7 input[type="submit"] {
+	background-color: #161830;
+	border: none;
+	color: #FFF;
+	font-family: proxima-nova, sans-serif;
+	font-weight: 300;
+	font-size: 16px;
+	font-style: uppercase;
+	letter-spacing: 3px;
+	text-transform: uppercase;
+	width: 100%;
+	padding: 15px;
+	transition-duration: 0.4s;
+}
+
+.wpcf7 input[type="submit"]:hover {
+	background-color: #454659;
+}
+
+.wpcf7-response-output {
+	background-color: #e9e9e9;
+	font-family: proxima-nova, sans-serif;
+	font-weight: 300;
+	font-size: 16px;
+	text-align: center;
+	width: 90%;
+}
+	
+
+/* ------------------------------------------------------------------------------------------- */
+/* ------------------------------------- RESPONSIVE CODE ------------------------------------- */
+/* ------------------------------------------------------------------------------------------- */
+
+/* ------------------- 960px width ------------------- */
+
+@media only screen and (max-width: 960px) {
+ 	#header-title {
+		display: none;
+	}
+	
+	#menu-main {
+		width: 100%;
+	}
+	
+	.heading-text {
+		padding: 150px 50px;
+	}
+	
+	#heading-large {
+		font-size: 40px;
+    	letter-spacing: 10px;
+	}
+	
+	.single-container {
+		width: 50%;
+		margin-bottom: 20px;
+		text-align: center;
+	}
+	
+	.archive-project-container, .frontpage-project-container { 
+		max-width: 720px;
+	}
+	
+	.article-container, #about-me-text-container {
+		margin: 0 100px;
+	}
+}
+
+/* ------------------- 640px width ------------------- */
+
+@media only screen and (max-width: 640px) {
+	#site-header {
+		display: inline-block;
+		padding: 0;
+		position: static;
+		width: 100%;	
+	}
+	
+	#header-title {
+		display: none;
+	}
+	
+	#header-theme-logo {
+		max-width: 150px;
+    	margin: 10px 30px;
+	}
+	
+	#logo-container {
+		text-align: center;
+		margin: 20px 0;
+	}
+
+	.heading-container {
+		margin: 0px;
+	}
+	
+	.heading-information {
+		padding: 120px 20px;
+	}
+
+	#heading-title {
+		font-size: 35px;
+    	letter-spacing: 10px;
+		padding: 0px;
+	}
+	
+	#heading-text, #footer-text {
+		font-size: 14px;
+		letter-spacing: 3px;
+	}
+
+	#heading-button {
+		margin: 8px;
+	}
+	
+	#about-me-picture {
+		width: 60%;
+	}
+
+	#about-me-text-container {
+		margin: 0;
+		padding: 0 50px;
+	}
+	
+	#nav-homepage {
+		background-color: #0f1122;
+		display: inline-block;
+		padding-top: 2px;
+		text-align: center;
+	}
+	
+	#menu-list {
+		float: none;
+		display: inline-block;
+	}
+	
+	.menu-row {
+		margin: 0px;
+		padding: 20px;
+	}
+
+	#menuMainScroll {
+	display: block;
+	}
+	
+	.single-container {
+		width: 100%;
+		margin-bottom: 20px;
+		text-align: center;
+	}
+	
+	.single-project-container {
+		padding: 40px 5%;
+	}
+
+	.individual-taxonomy-container {
+		width: 44%;
+    	padding: 2%;
+	}
+	
+	#contact-form-container {
+		margin: 0;
+		padding: 0 40px;
+	}
+}
