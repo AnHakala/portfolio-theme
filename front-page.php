@@ -15,29 +15,35 @@ $query = new WP_Query($args);
 <main id="site-main" role="main">
 	<section class="heading-container">
 		<div class="heading-information">
-			<h1 id="heading-title">GREETINGS</h1>
-			<p id="heading-text">Youve made it to my personal portfolio</p>
-			<a class="button-title" href="wordpress/projects">
-				<button id="heading-button">BROWSE</button>
-			</a>
+			<div id="heading-text-container">
+				<h1 id="heading-title">GREETINGS</h1>
+				<p id="heading-text">Youve made it to my personal portfolio</p>
+			</div>
+			<div id="heading-button-container">
+				<a class="button-title" href="wordpress/projects">
+					<button id="heading-button">BROWSE</button>
+				</a>
+			</div>
 		</div>
 	</section>
 	<section id="about-me-container">
 		<div class="frontpage-title-container">
 			<h1>About me</h1>
 		</div>
-		<figure id="text-divider-container">
-			<img class="text-divider" src="<?php bloginfo('template_directory'); ?>/images/feed_divider.png" alt="divider">
-		</figure>
-		<figure id="about-me-picture-container">
-			<img id="about-me-picture" src="<?php bloginfo('template_directory'); ?>/images/aboutme_image.png" alt="myself">
-		</figure>
-		<figure id="text-divider-container">
-			<img class="text-divider" src="<?php bloginfo('template_directory'); ?>/images/feed_divider.png" alt="divider">
-		</figure>
-		<div id="about-me-text-container">
+		<div class="fade-in">			
+			<figure id="text-divider-container">
+				<img class="text-divider" src="<?php bloginfo('template_directory'); ?>/images/feed_divider.png" alt="divider">
+			</figure>
+			<figure id="about-me-picture-container">
+				<img id="about-me-picture" src="<?php bloginfo('template_directory'); ?>/images/aboutme_image.png" alt="myself">
+			</figure>
+			<figure id="text-divider-container">
+				<img class="text-divider" src="<?php bloginfo('template_directory'); ?>/images/feed_divider.png" alt="divider">
+			</figure>
+		</div>
+		<div id="about-me-text-container" class="fade-in">
 			<p>
-				As you've probably figured out already, my name is Andreas Hakala. I am a Graphic Designer and aspiring Front-end Developer in search for new challenges and 		opportunities that can bolster my progress and experience within those fields. As a person i tend to be quite detail oriented, organized, calm and easygoing with anything I do. My primary focuses as of recently involves Motion Graphics, UI/UX Design and Web Development.
+				As you've probably figured out already, my name is Andreas Hakala. I am a Graphic Designer and aspiring Front-end Developer in search for new challenges and opportunities that can bolster my progress and experience within those fields. As a person i tend to be quite detail oriented, organized, calm and easygoing with anything I do. My primary focuses as of recently involves Motion Graphics, UI/UX Design and Web Development.
 			</p>
 		</div>
 	</section>
@@ -45,7 +51,7 @@ $query = new WP_Query($args);
 		<div class="frontpage-title-container">
 			<h1>Recent Projects</h1>
 		</div>
-		<div class="frontpage-project-container">
+		<div class="frontpage-project-container fade-in">
 		<?php
 		if ($query -> have_posts()) {
 			while ($query -> have_posts()) {
@@ -82,7 +88,7 @@ $query = new WP_Query($args);
 		<div class="frontpage-title-container">
 			<h1>Contact me</h1>
 		</div>
-		<div id="contact-form-container">
+		<div id="contact-form-container" class="fade-in">
 			<?php $contact='[contact-form-7 id="125" title="Contact form 1"]'?>
 			<?php echo do_shortcode($contact);?>
 		</div>

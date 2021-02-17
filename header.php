@@ -5,7 +5,7 @@
       	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<link rel="stylesheet" type="text/css" href="<?php echo get_stylesheet_uri(); ?>" />
 		<link rel="stylesheet" href="https://use.typekit.net/nnn8mgu.css">
-		<script type="text/javascript" src="<?php bloginfo('template_directory'); ?>/code.js"></script>
+		<script type="text/javascript" src="<?php bloginfo('template_directory'); ?>javascript/functions.js"></script>
     <?php wp_head(); ?>
     </head>
     <body>

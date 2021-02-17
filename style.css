@@ -137,7 +137,7 @@ h3 {
 	display: flex;
 	padding: 20px 10px;
 	position: fixed;
-	top: 32px;
+	top: 0px;
 	width: 100%;
 	z-index: 1;
 }
@@ -189,26 +189,20 @@ h3 {
 
 .menu-row {
 	float: left;
+	border-radius: 3px;
 	margin-right: 40px;
-	padding: 15px 0;
+	padding: 15px;
+	transition-duration: 0.3s;
+}
+
+.menu-row:hover {
+	background: #2d2f45;
 }
 
 .menu-row a {
 	font-weight: 300;
 	letter-spacing: 3px;
 	transition-duration: 0.3s;
-}
-
-.menu-row a:hover {
-	text-shadow:
-    -0.3px -0.3px 0 #FFF,
-    0.3px -0.3px 0 #FFF,
-    -0.3px 0.3px 0 #FFF,
-    0.3px 0.3px 0 #FFF;
-    -webkit-transition: all .3s;
-    -moz-transition: all .3s;
-    -o-transition: all .3s;
-    transition: all .3s;
 }
 
 /* ------------------- Scroll Navigation ------------------- */
@@ -234,7 +228,6 @@ h3 {
     opacity: 1; 
 }
 
-
 /* ------------------------------------------------------------------------------------------- */
 /* ------------------------------------------- BODY ------------------------------------------ */
 /* ------------------------------------------------------------------------------------------- */
@@ -249,7 +242,7 @@ h3 {
     height: 100%;
     background: url('images/heading2.png') 50% 50% no-repeat;
     background-size: cover;
-	margin-top: 95px;
+	margin-top: 75px;
 }
 
 .heading-information {	
@@ -263,9 +256,38 @@ h3 {
     max-width: 640px;
 }
 
+#heading-text-container { 
+	animation: fadein 3s;
+}
+
+#heading-button-container {
+	animation: btnfadein 5s;
+}
+
+@keyframes fadein {
+    0% {
+    	opacity: 0;
+  	}
+  	100% {
+    	opacity: 1;
+  	}
+}
+
+@keyframes btnfadein {
+    0% {
+    	opacity: 0;
+  	}
+  	50% {
+    	opacity: 0;
+  	}
+  	100% {
+    	opacity: 1;
+  	}
+}
+
 #heading-button {
 	background: none;
-	border: 3px solid #FFFFFF;
+	border: 1px solid #FFFFFF;
 	color: #FFFFFF;
 	font-family: proxima-nova, sans-serif;
 	font-weight: 300;
@@ -281,7 +303,8 @@ h3 {
 
 #heading-button:hover {
 	background: #161830;
-
+	border: 1px solid #161830;
+	transform: scale(1.1);
 }
 
 /* ------------------------------------------------------------------------------------------- */
@@ -345,7 +368,7 @@ h3 {
 /* ------------------- Frontpage - About Containers ------------------- */
 
 #about-me-container {
-	padding: 40px 0;
+	padding: 60px 0;
 	text-align: center;
 }
 
@@ -367,7 +390,7 @@ h3 {
 
 #recent-projects-container {
 	background: #EFEFEF;
-	padding: 40px 0;
+	padding: 60px 0;
 	text-align: center;
 }
 
@@ -381,7 +404,7 @@ h3 {
 /* ------------------- Frontpage - Contact Form Containers ------------------- */
 
 #contact-me-container {
-	padding: 40px 0;
+	padding: 60px 0;
 	text-align: center;
 }
 
@@ -626,7 +649,7 @@ h3 {
 }
 
 /* ------------------------------------------------------------------------------------------- */
-/* ------------------------------------ PLUGINS-CSS-EDITS ------------------------------------ */
+/* ---------------------------------- PLUGINS-CSS-JS-EDITS ----------------------------------- */
 /* ------------------------------------------------------------------------------------------- */
 
 /* ------------------- Visual Portfolio Gallery ------------------- */
@@ -680,6 +703,19 @@ h3 {
 	width: 90%;
 }
 	
+.fade-in {
+  	opacity: 0;
+ 	transform: translateY(10vh);
+  	visibility: hidden;
+  	transition: opacity 1s ease-out, transform 1.2s ease-out;
+  	will-change: opacity, visibility;
+}
+.fade-in.is-visible {
+	opacity: 1;
+	transform: none;
+	visibility: visible;
+}
+
 
 /* ------------------------------------------------------------------------------------------- */
 /* ------------------------------------- RESPONSIVE CODE ------------------------------------- */
